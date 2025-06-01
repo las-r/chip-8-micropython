@@ -4,8 +4,14 @@ import ssd1306
 import time
 
 # made by las-r on github
-# v1.0
+# v1.1
 # based on chip-8-python v1.5
+
+# usage:
+# set `rom` variable to the name of
+# the rom file in your flash memory
+
+rom = "file name here"
 
 # behavior settings
 LEGACYSHIFT = False
@@ -311,7 +317,7 @@ def execInst(inst):
                 v[ilx] = ram[i + ilx]
                                 
 # load rom
-loadRom("output.ch8")
+loadRom(rom)
 
 # main loop
 run = True
